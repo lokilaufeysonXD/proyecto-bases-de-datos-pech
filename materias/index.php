@@ -2,7 +2,6 @@
 require_once("../lib/connect.php");
 $consulta = "SELECT * FROM materias";
 $resultado = mysqli_query($connect, $consulta);
-$array = mysqli_fetch_array($resultado);
 ?>
 
 <!DOCTYPE html>
