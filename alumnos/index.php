@@ -1,6 +1,6 @@
 <?php 
 require_once("../lib/funtions.php");
-$users = get_all_alumnos($connect);
+$alumnos = get_all_alumnos($connect);
 ?>
 
 <!DOCTYPE html>
@@ -28,7 +28,7 @@ $users = get_all_alumnos($connect);
         </thead>
         <tbody>    
             <?php
-                while ($fila = mysqli_fetch_array ($users)) {
+                while ($fila = mysqli_fetch_array ($alumnos)) {
 
             ?>
             <tr> 
@@ -40,7 +40,7 @@ $users = get_all_alumnos($connect);
                 <td><?php echo $fila['licenciatura'];?></td>
                 <td><?php echo $fila['cuatrimestre'];?></td>
                 <td><?php echo $fila['estatus'];?></td>
-                <td><a href="detail.phpid=<?php echo $fila ['ID'];?>">detalle</a></td>
+                <td><a href= "detail.php?ID=<?php echo $fila['ID'] ; ?> " >detalle</a></td>
                 <td><a href="">editar</a></td>
                 <td><a href="">eliminar</a></td>
             </tr>        
