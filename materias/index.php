@@ -1,7 +1,6 @@
 <?php 
-require_once("../lib/connect.php");
-$consulta = "SELECT * FROM materias";
-$resultado = mysqli_query($connect, $consulta);
+require_once("../lib/funtions.php");
+$materia = get_all_materias($connect);
 ?>
 
 <!DOCTYPE html>
@@ -25,17 +24,19 @@ $resultado = mysqli_query($connect, $consulta);
         </thead>
         <tbody>    
             <?php
-                while ($fila = mysqli_fetch_array ($resultado)) {
-
+                while ($fila = mysqli_fetch_array ($materia)) {
             ?>
             <tr> 
                 <td><?php echo $fila['ID'];?></td>
                 <td><?php echo $fila['nombre'];?></td>
                 <td><?php echo $fila['cuatrimestre'];?></td>
                 <td><?php echo $fila['licenciatura'];?></td>
+                <td><a href= "detail.php?ID=<?php echo $fila['ID'] ; ?> " >detalle</a></td>
+                <td><a href="">editar</a></td>
+                <td><a href="">eliminar</a></td>
             </tr>        
             <?php
-                    }
+             }
             ?> 
         </tbody>
     </table>

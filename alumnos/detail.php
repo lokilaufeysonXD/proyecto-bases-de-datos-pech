@@ -2,7 +2,7 @@
 require_once("../lib/funtions.php") ;
 $ID = $_GET['ID'];
 $users = get_all_alumnos($connect) ;
-$resultado = get_alumnos($connect, $ID) ;
+$resultado = get_alumno($connect, $ID) ;
 $alumno =mysqli_fetch_array($resultado) ;
 ?>
 
@@ -20,34 +20,23 @@ $alumno =mysqli_fetch_array($resultado) ;
     <table>
         <thead>
             <tr>
-                <td>ID</td>
-                <td>Nombre</td>
-                <td>Apellido</td>
-                <td>Teléfono</td>
-                <td>Correo</td>
-                <td>Licenciatura</td>
-                <td>Cuatrimestre</td>
-                <td>Status</td>
+                <td>ID             &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+                <td>Nombre         &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+                <td>Apellido       &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+                <td>Correo         &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+                <td>Licenciatura   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th></td>
+                <td>Cuatrimestre   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th></td>
             </tr>
         </thead>
         <tbody>
-        <?php
-            while ($fila = mysqli_fetch_array($users)) {
-        ?>
-
         <tr>
-            <td><?php echo $fila ['ID'] ; ?> </td>
-            <td><?php echo $fila ['nombre'] ; ?> </td>
-            <td><?php echo $fila ['apellido'] ; ?> </td>
-            <td><?php echo $fila ['teléfono'] ; ?> </td>
-            <td><?php echo $fila ['correo'] ; ?> </td>
-            <td><?php echo $fila ['licenciatura'] ; ?> </td>
-            <td><?php echo $fila ['cuatrimestre'] ; ?> </td>
-            <td><?php echo $fila ['status'] ; ?> </td>
+            <td><?php echo $alumno ['ID']; ?> </td>
+            <td><?php echo $alumno ['nombre']; ?> </td>
+            <td><?php echo $alumno ['apellido']; ?> </td>
+            <td><?php echo $alumno ['correo']; ?> </td>
+            <td><?php echo $alumno ['licenciatura']; ?> </td>
+            <td><?php echo $alumno ['cuatrimestre']; ?> </td>
         </tr>
-        <?php
-        }
-        ?>
         </tbody>
     </table>
 </body>

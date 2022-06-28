@@ -1,6 +1,9 @@
-<?php 
-require_once("../lib/funtions.php");
-$profesores = get_all_profesores($connect);
+<?php
+require_once("../lib/funtions.php") ;
+$ID = $_GET['ID'];
+$users = get_all_profesores($connect) ;
+$resultado = get_profesores($connect, $ID) ;
+$profesores =mysqli_fetch_array($resultado) ;
 ?>
 
 <!DOCTYPE html>
@@ -9,10 +12,11 @@ $profesores = get_all_profesores($connect);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>profesores</title>
+    <title>Document</title>
 </head>
 <body>
-    <hr>
+    <h1>Detalle del alumno <?php echo $profesores ['apellido']." ". $profesores ['nombre'] ?>
+    <small> <a href="../profesores/">Regresar </a> </small> </h1>
     <table>
         <thead>
             <tr>
@@ -24,25 +28,15 @@ $profesores = get_all_profesores($connect);
                 <th>status         &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
             </tr>
         </thead>
-        <tbody>   
-            <?php
-                while ($fila = mysqli_fetch_array ($profesores)) {
-
-            ?>
-            <tr> 
-                <td><?php echo $fila['ID'];?></td>
-                <td><?php echo $fila['nombre'];?></td>
-                <td><?php echo $fila['apellido'];?></td>
-                <td><?php echo $fila['telefono'];?></td>
-                <td><?php echo $fila['correo'];?></td>
-                <td><?php echo $fila['estatus'];?></td>
-                <td><a href= "detail.php?ID=<?php echo $fila['ID'] ; ?> " >detalle</a></td>
-                <td><a href="">editar</a></td>
-                <td><a href="">eliminar</a></td>
-            </tr>        
-            <?php
-                    }
-            ?> 
+        <tbody>
+        <tr>
+                <td><?php echo $profesores['ID'];?></td>
+                <td><?php echo $profesores['nombre'];?></td>
+                <td><?php echo $profesores['apellido'];?></td>
+                <td><?php echo $profesores['telefono'];?></td>
+                <td><?php echo $profesores['correo'];?></td>
+                <td><?php echo $profesores['estatus'];?></td>
+        </tr>
         </tbody>
     </table>
 </body>
