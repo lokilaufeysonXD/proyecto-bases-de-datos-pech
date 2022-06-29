@@ -44,6 +44,7 @@
         <label for="cuatrimestre">cuatrimestre:</label>
         <input type="text" id="cuatrimestre" />
       </li>
+      <button name="enviar">enviar</button>
 </center>
 </body>
 </html>

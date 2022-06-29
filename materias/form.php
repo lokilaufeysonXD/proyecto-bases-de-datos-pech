@@ -29,7 +29,7 @@
         <label for="licenciatura">licebciatura:</label>
         <input type="text" id="licenciatura" />
       </li>
-
+      <button name="enviar">enviar</button>
 </center>
 </body>
 </html>

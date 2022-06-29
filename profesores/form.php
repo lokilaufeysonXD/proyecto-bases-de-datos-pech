@@ -39,6 +39,7 @@
         <label for="status">status:</label>
         <input type="text" id="status" />
       </li>
+      <button name="enviar">enviar</button>
   </center>
 </body>
 </html>
