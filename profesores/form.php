@@ -9,7 +9,7 @@
 <body>
   <center>
     <h1>
-      <p>formularios alumnos</p>
+      <p>formularios profesores</p>
     </h1>
   </center>
   <center>
@@ -26,8 +26,8 @@
       </li>
 
       <li>
-        <label for="tel">telefono:</label>
-        <input type="num" id="tel"  />
+        <label for="telefono">telefono:</label>
+        <input type="num" id="tel" />
       </li>
 
       <li>
@@ -36,14 +36,9 @@
       </li>
 
       <li>
-        <label for="licenciatura">licebciatura:</label>
-        <input type="text" id="licenciatura" />
+        <label for="status">status:</label>
+        <input type="text" id="status" />
       </li>
-
-      <li>
-        <label for="cuatrimestre">cuatrimestre:</label>
-        <input type="text" id="cuatrimestre" />
-      </li>
-</center>
+  </center>
 </body>
 </html>
