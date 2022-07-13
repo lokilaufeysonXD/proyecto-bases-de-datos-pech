@@ -9,27 +9,32 @@
 <body>
   <center>
     <h1>
-      <p>formularios dde materias</p>
+      <p>formularios de materias</p>
     </h1>
   </center>
   <center>
-    <form action="">
-    <ul>
-      <li>
-        <label for="name">Nombre:</label>
-        <input type="text" id="name"  />
-      </li>
+    <form action="insert.php" method="post" >
+      <ul>
+        <li>
+          <label for="name">Nombre:</label>
+          <input type="text" id="name" name="name" />
+        </li>
 
-      <li>
-        <label for="cuatrimestre">cuatrimestre:</label>
-        <input type="text" id="cuatrimestre" />
-      </li>
-      
-      <li>
-        <label for="licenciatura">licebciatura:</label>
-        <input type="text" id="licenciatura" />
-      </li>
-      <button name="enviar">enviar</button>
+        <li>
+          <label for="cuatrimestre">cuatrimestre:</label>
+          <input type="text" id="cuatrimestre" name="cuatrimestre"/>
+        </li>
+
+        <li>
+          <label for="licenciatura">licebciatura:</label>
+          <input type="text" id="licenciatura" name="licenciatura"/>
+        </li>
+        
+        <li>
+          <input type="submit">
+        </li>
+      </ul>
+    </form>  
 </center>
 </body>
 </html>

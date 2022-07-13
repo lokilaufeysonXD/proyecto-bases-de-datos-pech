@@ -9,37 +9,42 @@
 <body>
   <center>
     <h1>
-      <p>formularios profesores</p>
+      <p>formularios alumnos</p>
     </h1>
   </center>
   <center>
-    <form action="">
-    <ul>
-      <li>
-        <label for="name">Nombre:</label>
-        <input type="text" id="name"  />
-      </li>
+    <form action="insert.php" method="post" >
+      <ul>
+        <li>
+          <label for="name">Nombre:</label>
+          <input type="text" id="name" name="name" />
+        </li>
 
-      <li>
-        <label for="apellido">apellido:</label>
-        <input type="text" id="apellido"  />
-      </li>
+        <li>
+          <label for="apellido">apellido:</label>
+          <input type="text" id="apellido"  name="apellido"/>
+        </li>
 
-      <li>
-        <label for="telefono">telefono:</label>
-        <input type="num" id="tel" />
-      </li>
+        <li>
+          <label for="tel">telefono:</label>
+          <input type="text" id="tel" name="tel" />
+        </li>
 
-      <li>
-        <label for="correo">correo:</label>
-        <input type="text" id="correo" />
-      </li>
+        <li>
+          <label for="correo">correo:</label>
+          <input type="text" id="correo" name="correo"/>
+        </li>
 
-      <li>
-        <label for="status">status:</label>
-        <input type="text" id="status" />
-      </li>
-      <button name="enviar">enviar</button>
-  </center>
+        <li>
+          <label for="status">Status:</label>
+          <input type="text" id="status" name="status">
+        </li>
+        
+        <li>
+          <input type="submit">
+        </li>
+      </ul>
+    </form>  
+</center>
 </body>
 </html>

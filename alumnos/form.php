@@ -13,38 +13,46 @@
     </h1>
   </center>
   <center>
-    <form action="">
-    <ul>
-      <li>
-        <label for="name">Nombre:</label>
-        <input type="text" id="name"  />
-      </li>
+    <form action="insert.php" method="post" >
+      <ul>
+        <li>
+          <label for="name">Nombre:</label>
+          <input type="text" id="name" name="name" />
+        </li>
 
-      <li>
-        <label for="apellido">apellido:</label>
-        <input type="text" id="apellido"  />
-      </li>
+        <li>
+          <label for="apellido">apellido:</label>
+          <input type="text" id="apellido"  name="apellido"/>
+        </li>
 
-      <li>
-        <label for="tel">telefono:</label>
-        <input type="num" id="tel"  />
-      </li>
+        <li>
+          <label for="tel">telefono:</label>
+          <input type="text" id="tel" name="tel" />
+        </li>
 
-      <li>
-        <label for="correo">correo:</label>
-        <input type="text" id="correo" />
-      </li>
+        <li>
+          <label for="correo">correo:</label>
+          <input type="text" id="correo" name="correo"/>
+        </li>
 
-      <li>
-        <label for="licenciatura">licebciatura:</label>
-        <input type="text" id="licenciatura" />
-      </li>
+        <li>
+          <label for="licenciatura">licebciatura:</label>
+          <input type="text" id="licenciatura" name="licenciatura"/>
+        </li>
 
-      <li>
-        <label for="cuatrimestre">cuatrimestre:</label>
-        <input type="text" id="cuatrimestre" />
-      </li>
-      <button name="enviar">enviar</button>
+        <li>
+          <label for="cuatrimestre">cuatrimestre:</label>
+          <input type="text" id="cuatrimestre" name="cuatrimestre"/>
+        </li>
+        <li>
+          <label for="status">Status:</label>
+          <input type="text" id="status" name="status">
+        </li>
+        <li>
+          <input type="submit">
+        </li>
+      </ul>
+    </form>  
 </center>
 </body>
 </html>

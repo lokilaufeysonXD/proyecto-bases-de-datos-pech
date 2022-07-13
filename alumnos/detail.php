@@ -29,6 +29,9 @@ $alumno =mysqli_fetch_array($resultado) ;
             </tr>
         </thead>
         <tbody>
+        <?php
+            while ($fila = mysqli_fetch_array($users)) {
+        ?> 
         <tr>
             <td><?php echo $alumno ['ID']; ?> </td>
             <td><?php echo $alumno ['nombre']; ?> </td>
@@ -37,6 +40,9 @@ $alumno =mysqli_fetch_array($resultado) ;
             <td><?php echo $alumno ['licenciatura']; ?> </td>
             <td><?php echo $alumno ['cuatrimestre']; ?> </td>
         </tr>
+        <?php
+        }
+        ?>
         </tbody>
     </table>
 </body>

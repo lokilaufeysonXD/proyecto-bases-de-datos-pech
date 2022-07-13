@@ -27,12 +27,18 @@ $materia =mysqli_fetch_array($resultado) ;
             </tr>
         </thead>
         <tbody>
+        <?php
+            while ($fila = mysqli_fetch_array($users)) {
+        ?> 
         <tr>
                 <td><?php echo $materia['ID'];?></td>
                 <td><?php echo $materia['nombre'];?></td>
                 <td><?php echo $materia['cuatrimestre'];?></td>
                 <td><?php echo $materia['licenciatura'];?></td>
         </tr>
+        <?php
+        }
+        ?>
         </tbody>
     </table>
 </body>

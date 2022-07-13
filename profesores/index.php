@@ -38,12 +38,18 @@ $profesores = get_all_profesores($connect);
                 <td><?php echo $fila['estatus'];?></td>
                 <td><a href= "detail.php?ID=<?php echo $fila['ID'] ; ?> " >detalle</a></td>
                 <td><a href="">editar</a></td>
-                <td><a href="">eliminar</a></td>
+                <td> <a href="update.php?ID=<?php echo $fila['ID'] ; ?> "> Eliminar </a></td>
             </tr>        
             <?php
                     }
             ?> 
         </tbody>
+        <tfoot>
+            <tr>
+                <th><a href="../"><button>Regresar</button></a></th>
+                <th><a href="form.php"><button>insertar</button></a></th>
+            </tr>
+        </tfoot>
     </table>
 </body>
 </html>
